@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="main.css"/>
+<div class="container bms">
+    <div class="row" ng-controller="layoutController">
+        <div class="col-md-2">
+            <div class="container input-card">
+                <div class="row">
+                    <p>
+                        No of Seats:
+                    </p>
+                    <select ng-model="selectedCount" ng-change="seats.setAvailCount(selectedCount)" ng-options="count as count.val for count in quantities"></select>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <!--ng-show="selectedVal != null && seatQuality != null">-->
+            <div class="table-responsive">
+                <h2 class="text-right">Book Seats</h2>
+                <hr> Seats left: {{seats.availCount.val}}
+                <br/>
+                <!-- map <pre>{{seats.map|json: 2}}</pre> -->
+                <!-- {{seats.map[seatQuality]}} -->
+                <!-- {{ seats.map[seatQuality].seats}} -->
+                <table class="table" style="width: auto">
+                    <!-- ng-repeat="(key, rang) in seats.map[seatQuality].seats"> -->
+                    <tr ng-repeat="row in seats.map[seatQuality].seats" class="row">
+                        <td class="SRow1">
+                            <div class="itemSeat" ng-repeat="seat in row">
+                                <span ng-show="$first">{{seat.letter}}</span>
+                                <a ng-class="{'selected': seat.check, 'available': (!seat.check && !seat.booked),  'blocked': seat.booked}" ng-click="seats.select({rang:seatQuality, row:row, seat: seat}, selectedCount)">{{seat.val}}</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <a>
+                    <div class="col-sm-5"></div>
+                    <div class="col-sm-4">
+                        <button class="cta proceed" ng-click="storeSeat()">Book</button>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>

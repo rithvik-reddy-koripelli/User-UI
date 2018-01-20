@@ -1,0 +1,17 @@
+<div ng-controller="theatreController" ng-init="getLocation();getTheatres();">
+    <button class="btn btn-danger" ng-click="sortyByDistance()">Sort By Distance</button>
+    <div class="col-sm-9 row">
+        <div class="btn-group btn-group-justified">
+            <div class="btn-group" ng-repeat="date in dates">
+                <button type="button"  ng-class="checkActive(date.getDate())" class="btn btn-primary" ng-click="setDate(date)">{{date.getDate()}}{{" - "+months[date.getMonth()]}}</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-10">
+        <ul id="theatres">
+            <li ng-repeat="theatre in theatres" data-lat="{{theatre.latitude}}" data-long="{{theatre.longitude}}">
+                <a href="#movies/{{theatre.id}}">{{theatre.name}}</a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <link rel="stylesheet" href="bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="bootstrap-select.js"></script>
+
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="i18n/defaults-en_US.js"></script>
+</head>
+
+<body>
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4" ng-controller="myController">
+        <form>
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="confirmation">Re-enter Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Re-enter Password">
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <label for "Genre">Select a Genre</label>
+                </div>
+                <div class="col-sm-4">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Action">Action</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Horror">Horror</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Comedy">Comedy</label>
+                    </div>
+                    <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="Social">Social</label>
+                        </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Thriller">Thriller</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Adventure">Adventure</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Drama">Drama</label>
+                    </div>
+                    <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="Crime">Crime</label>
+                        </div>
+                </div>
+                <div class="col-sm-4">
+                        <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="Mystery">Mystery</label>
+                            </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Romance">Romance</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Fiction">Fiction</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Historical">Historical</label>
+                    </div>
+
+                </div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+        </form>
+        </div>
+
+    </div>
+    <link rel="stylesheet" href="bootstrap-select.min.css"></link>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="bootstrap-select.js"></script>
+
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="i18n/defaults-en_US.js"></script>
+
+</body>
+
+</html>

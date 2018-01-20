@@ -1,0 +1,91 @@
+<div ng-controller="moviesController">
+    <div class="col-sm-4 panel panel-default" style="background:rgb(250, 200, 200);" ng-repeat="movie in movies">
+        <div class="row" style="background:rgb(231, 133, 133);">
+
+            <h4 class="text-center">
+                <strong>{{movie.movieName}}</strong>
+            </h4>
+
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-8">
+                <h4>Duration : {{movie.duration}} minutes</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <h4>Show Timings</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2" ng-repeat="show in movie.showTime">
+                <button type="button" ng-click="showLayout(show,movie.theatreMovieId)" class="btn btn-success btn-sm">{{show.substring(0,5)}}</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="img-rounded col-sm-3" ng-repeat="genre in movie.genre" align="center" style="background:rgb(111, 111, 190);">
+                {{genres[genre]}}
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <h4>RATING : {{movie.rating|number:2}}</h4>
+            </div>
+            <div class="col-sm-4">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal{{movie.movieId}}">
+                    Give Your Rating
+                </button>
+            </div>
+            <div class="modal" id="modal{{movie.movieId}}" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog model-lg" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Rate the movie</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body row">
+
+                            <form>
+                                <fieldset class="rating" id="{{movie.movieId}}">
+                                    <input type="radio" id="star5" name="rating" value="5" />
+                                    <label for="star5" title="Rocks!">5 stars</label>
+                                    <input type="radio" id="star4" name="rating" value="4" />
+                                    <label for="star4" title="Pretty good">4 stars</label>
+                                    <input type="radio" id="star3" name="rating" value="3" />
+                                    <label for="star3" title="Meh">3 stars</label>
+                                    <input type="radio" id="star2" name="rating" value="2" />
+                                    <label for="star2" title="Kinda bad">2 stars</label>
+                                    <input type="radio" id="star1" name="rating" value="1" />
+                                    <label for="star1" title="Sucks big time">1 star</label>
+                                </fieldset>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" ng-click="submitRating(movie.movieId)" class="btn btn-primary">Submit</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <br>
+
+        <!-- <div class="row">
+            <button type="button" class="btn btn-danger btn-lg btn-block">BOOK</button>
+        </div> -->
+    </div>
+
+    <div class="col-sm-2"></div>
+</div>

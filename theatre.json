@@ -1,0 +1,30 @@
+[
+   { 'name':'pvr cinemas',
+    'lat':17.4350531,
+    'long':78.3867323
+   },
+   {
+    'name':'vijetha theatre',
+    'lat':17.4543775,
+    'long':78.4191978
+   },
+    {
+    'name':"Galaxy 70MM",
+    'lat':17.4033189,
+    'long':78.4109688
+    
+   },
+    {
+    'name':"Alankar Cinema",
+    'lat':17.3765863,
+    'long':78.4195089
+   
+   },
+    {
+    'name':"sree rama theatre",
+    'lat':17.3544888,
+    'long':78.4572959
+   
+   }
+   
+]
